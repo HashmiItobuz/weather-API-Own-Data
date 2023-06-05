@@ -7,10 +7,6 @@ body {
 
 }
 
-.icon {
-    height: 2rem;
-}
-
 input {
     background-color: #3937fa !important;
 }
@@ -31,7 +27,6 @@ input {
 .loc-temp {
     font-size: 4rem;
     margin-bottom: 0px;
-
 }
 
 .weather-content {
@@ -39,16 +34,8 @@ input {
     color: #7abfff !important;
 }
 
-.weather-description {
-    width: 20rem;
-}
-
 .hidden {
     display: none;
-}
-
-.error-font-size {
-    font-size: 3rem;
 }
 
 .error-img {
@@ -57,34 +44,65 @@ input {
 }
 
 
-@media screen and (min-width:425px) {
-    .font-size {
-        font-size: 3rem !important;
+@media screen and (min-width:320px) {
+    .input-box {
+        width: 15rem;
+        font-size: 1.4rem;
     }
 
     .icon {
-        height: 3rem;
+        height: 2rem;
+    }
+
+    .weather-description {
+        width: 17rem;
+    }
+
+    .error-img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .error-font-size {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:425px) {
+    .input-box {
+        padding: 1rem;
+        width: 18rem;
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        height: 2.5rem;
     }
 
     .weather-description {
         width: 25rem;
     }
+
     .error-img {
         width: 20rem;
         height: 15rem;
+    }
+
+    .error-font-size {
+        font-size: 2.5rem;
     }
 
 }
 
 @media screen and (min-width:768px) {
     .icon {
-        height: 4rem;
+        height: 3rem;
     }
 
     .input-box {
         padding: 1rem;
         width: 25rem;
-        font-size: 2rem !important;
+        font-size: 2rem;
     }
 
     input::placeholder {
@@ -94,8 +112,13 @@ input {
     .weather-description {
         width: 30rem;
     }
+
     .error-img {
         width: 25rem;
         height: 20rem;
+    }
+
+    .error-font-size {
+        font-size: 3rem;
     }
 }
