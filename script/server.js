@@ -9,12 +9,12 @@ const server = http.createServer((req, res) => {
     if (req.url == '/') {
         res.statusCode = 200;
         const main = fs.readFileSync('../weather.json');
-        res.end(main.toString());
+        res.end(main);
     }
     else if (req.url == '/weather') {
         res.statusCode = 200;
         const main = fs.readFileSync('../weather.json');
-        res.end(main.toString());
+        res.end(main);
     }
     else {
         res.statusCode = 404;

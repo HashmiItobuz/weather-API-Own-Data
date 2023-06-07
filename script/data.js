@@ -4,6 +4,7 @@ const locationTemp = document.getElementById("temperature");
 const feelsLike = document.getElementById("feelsLike");
 const weatherImg = document.getElementById("weatherImage");
 const weatherDescription = document.querySelector(".weather-description");
+
 let value = "";
 const currWidth = weatherImg.clientWidth;
 weatherDescription.classList.add("hidden");
@@ -25,7 +26,7 @@ async function getData() {
         weatherImg.classList.remove("error-img");
 
         for (let i = 0; i <= res.location.length; i++) {
-            if (value === res.location[i].name) {
+            if (value.toLowerCase() === res.location[i].name.toLowerCase()) {
                 placeName.innerHTML = res.location[i].name;
                 locationTemp.innerHTML = res.location[i].temp_c + "<sup>o</sup>";
                 feelsLike.innerHTML = "Feels " + res.location[i].feelslike_f + "<sup>o</sup>";
@@ -41,9 +42,6 @@ async function getData() {
                 }
                 inputValue.value = "";
                 break;
-            }
-            else {
-                continue;
             }
         }
     } catch {
